@@ -2,7 +2,7 @@
 //  AssignmentAppTests.swift
 //  AssignmentAppTests
 //
-//  Created by Mohini Mehetre on 18/04/20.
+//  Created by Dipti Mastud on 18/04/20.
 //  Copyright © 2020 Dipti Mastud. All rights reserved.
 //
 

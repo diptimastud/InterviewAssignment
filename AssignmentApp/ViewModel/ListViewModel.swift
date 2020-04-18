@@ -7,8 +7,19 @@
 //
 
 import UIKit
-import Reachability
 
 class ListViewModel: NSObject {
-    
+    func getCountryDetails(completion: @escaping (CountryDetails?, Error?) -> Void) {
+        Services.sharedInstance.getCountryDetails { (countyDetails, error) in
+            DispatchQueue.main.async {
+                if error != nil {
+                    completion(nil, error)
+                } else {
+                    if countyDetails != nil {
+                        completion(countyDetails, nil)
+                    }
+                }
+            }
+        }
+    }
 }

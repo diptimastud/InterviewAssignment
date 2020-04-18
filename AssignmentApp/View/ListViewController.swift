@@ -8,7 +8,6 @@
 
 import UIKit
 import MBProgressHUD
-import Reachability
 
 class ListViewController: UITableViewController, AppDisplayable {
     
@@ -17,6 +16,7 @@ class ListViewController: UITableViewController, AppDisplayable {
     let cellId = "cellId"
     var countryDetails : [CountryDetail]  = [CountryDetail]()
     var refresher = UIRefreshControl()
+    var listViewModel = ListViewModel()
     
     // MARK: - View Lifecycle Methods -
     
@@ -48,7 +48,7 @@ class ListViewController: UITableViewController, AppDisplayable {
         self.countryDetails.removeAll()
         self.tableView.reloadData()
         self.showHUD(progressLabel: "Loading...")
-        Services.sharedInstance.getCountryDetails { (countyDetails, error) in
+        listViewModel.getCountryDetails { (countyDetails, error) in
             DispatchQueue.main.async {
                 self.refresher.endRefreshing()
                 self.dismissHUD(isAnimated: true)
@@ -68,17 +68,6 @@ class ListViewController: UITableViewController, AppDisplayable {
                     self.tableView.reloadData()
                 }
             }
-        }
-    }
-    
-    func showHUD(progressLabel: String) {
-        let progressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
-        progressHUD.label.text = progressLabel
-    }
-    
-    func dismissHUD(isAnimated: Bool) {
-        DispatchQueue.main.async {
-            MBProgressHUD.hide(for: self.view, animated: isAnimated)
         }
     }
 }

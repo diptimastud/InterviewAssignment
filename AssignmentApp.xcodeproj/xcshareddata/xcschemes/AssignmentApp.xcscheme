@@ -26,8 +26,29 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "35D9ABD4244AE2FF001F8D50"
+               BuildableName = "AssignmentAppTests.xctest"
+               BlueprintName = "AssignmentAppTests"
+               ReferencedContainer = "container:AssignmentApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "35D9ABE5244AEAC4001F8D50"
+               BuildableName = "AssignmentAppUITests.xctest"
+               BlueprintName = "AssignmentAppUITests"
+               ReferencedContainer = "container:AssignmentApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

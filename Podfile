@@ -8,4 +8,9 @@ target 'AssignmentApp' do
   # Pods for AssignmentApp
 	pod 'MBProgressHUD', '~> 1.1.0'
   pod 'SwiftLint'
+  
+  target 'AssignmentAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
 end

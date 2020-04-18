@@ -1,4 +1,4 @@
-# InterviewAssignment
+# Interview Assignment
 
 The exercise involves build a “proof of concept” app which consumes a REST service and displays photos with headings and descriptions. 
 

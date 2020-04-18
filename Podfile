@@ -8,5 +8,4 @@ target 'AssignmentApp' do
   # Pods for AssignmentApp
 	pod 'MBProgressHUD', '~> 1.1.0'
   pod 'SwiftLint'
-  pod 'ReachabilitySwift'
 end
